@@ -1,0 +1,73 @@
+{
+	"name": "jupyter-ada-kernel",
+	"displayName": "Jupyter Ada Kernel",
+	"description": "A Jupyter kernel for Ada",
+	"version": "1.0.1",
+	"publisher": "MaximReznik",
+	"icon": "Ada.png",
+	"engines": {
+		"vscode": "^1.74.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:jupyter-ada-kernel.install"
+	],
+	"main": "./dist/main",
+	"contributes": {
+		"commands": [
+			{
+				"command": "jupyter-ada-kernel.install",
+				"title": "Install Jupyter Ada Kernel"
+			}
+		]
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/reznikmm/jupyter.git"
+	},
+	"scripts": {
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"pretest": "npm run compile && npm run lint",
+		"lint": "eslint src --ext ts",
+		"test": "node ./out/test/runTest.js",
+		"vscode:prepublish": "npm run esbuild-base -- --minify",
+		"esbuild-base": "esbuild ./src/extension.ts --bundle --outfile=dist/main.js --external:vscode --format=cjs --platform=node",
+		"esbuild": "npm run esbuild-base -- --sourcemap",
+		"esbuild-watch": "npm run esbuild-base -- --sourcemap --watch",
+		"test-compile": "tsc -p ./"
+	},
+	"devDependencies": {
+		"@types/glob": "^8.0.0",
+		"@types/mocha": "^10.0.1",
+		"@types/node": "16.x",
+		"@types/vscode": "^1.74.0",
+		"@typescript-eslint/eslint-plugin": "^5.45.0",
+		"@typescript-eslint/parser": "^5.45.0",
+		"@vscode/test-electron": "^2.2.0",
+		"esbuild": "^0.16.12",
+		"eslint": "^8.28.0",
+		"glob": "^8.0.3",
+		"mocha": "^10.1.0",
+		"typescript": "^4.9.3"
+	},
+	"dependencies": {
+		"@terascope/fetch-github-release": "^0.8.7"
+	},
+	"__metadata": {
+		"id": "055c4854-83e5-413b-9bcc-c9bf01e36590",
+		"publisherId": "675ffeb4-53b2-4644-bd52-b55cc347d1c7",
+		"publisherDisplayName": "Maxim Reznik",
+		"targetPlatform": "undefined",
+		"isApplicationScoped": false,
+		"isPreReleaseVersion": false,
+		"hasPreReleaseVersion": false,
+		"installedTimestamp": 1734426043714,
+		"pinned": false,
+		"preRelease": false,
+		"source": "gallery",
+		"size": 248057
+	}
+}

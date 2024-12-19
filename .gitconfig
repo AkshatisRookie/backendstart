@@ -1,0 +1,10 @@
+[user]
+	name = Akshat Seth
+	email = u23ee101@eed.svnit.ac.in
+[color]
+	ui = auto
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
