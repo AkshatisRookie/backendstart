@@ -1,0 +1,17 @@
+{
+  "name": "aksha",
+  "version": "1.0.0",
+  "description": "basic app deployment",
+  "main": "index.js",
+  "scripts": {
+  "start": "node index.js"
+  },
+  "keywords": [
+    "node"
+  ],
+  "author": "akshat",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
