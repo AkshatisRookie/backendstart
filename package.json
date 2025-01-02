@@ -1,16 +1,14 @@
 {
-  "name": "aksha",
+  "name": "backendstart",
   "version": "1.0.0",
-  "description": "basic app deployment",
-  "main": "index.js",
+  "main": "server.js",
+  "type":"module",
   "scripts": {
-  "start": "node index.js"
+    "start": "node server.js"
   },
-  "keywords": [
-    "node"
-  ],
-  "author": "akshat",
+  "author": "",
   "license": "ISC",
+  "description": "",
   "dependencies": {
     "express": "^4.21.2"
   }
