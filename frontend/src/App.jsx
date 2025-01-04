@@ -24,6 +24,7 @@ function App() {
       <h1> full stack start</h1>
       <p>INTERNS: {intern.length}</p>
 
+               
       {
         intern.map((intern,index)=>(
           <div key={intern.id}>
