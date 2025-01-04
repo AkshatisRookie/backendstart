@@ -8,7 +8,7 @@ const port = process.env.PORT || 3000;
 //  res.send('Server is running');
 //});
 
-app.get('/api/intern',(req,res)=>{ //use json formatter (tree) format to check api
+app.get('/api/intern',(req,res)=>{ 
   const jokes = [
     {
       id:1,
