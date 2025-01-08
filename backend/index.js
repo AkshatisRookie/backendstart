@@ -1,7 +1,17 @@
+import dotenv from "dotenv";
 import mongoose from "mongoose";
-import { database_namer } from "./constants";
-import express from "express"
-/*
+import { database_name } from "./src/utils/constants.js";
+import connectionDB from "./src/db/datab.js";
+
+dotenv.config({
+    path:'./env'
+})
+connectionDB()
+
+
+
+
+/*import express from "express"
 //adding IIFE(immediately invoked function expression)
 //global scope me extra info add nahi hoti
 //written in a particular way
