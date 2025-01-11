@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import { database_name } from "./src/utils/constants.js";
+import { database_name } from "../utils/constants.js";
 const connectionDB=async()=>{
     try {
         const connectioninstance=await mongoose.connect(`${process.env.mongodb_url}/${database_name})`)
@@ -8,3 +8,5 @@ const connectionDB=async()=>{
         console.log("Mongoose connection error",error);
         process.exit(1)
 }}
+export default connectionDB; //boiler plate
+

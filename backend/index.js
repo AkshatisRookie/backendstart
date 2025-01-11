@@ -1,11 +1,11 @@
 import dotenv from "dotenv";
 import mongoose from "mongoose";
-import { database_name } from "./src/utils/constants.js";
-import connectionDB from "./src/db/datab.js";
+import { database_name } from "../backend/src/utils/constants.js";
+import connectionDB from "../backend/src/db/data.js";
 
 dotenv.config({
-    path:'./env'
-})
+    path:'./.env'
+});
 connectionDB()
 
 
