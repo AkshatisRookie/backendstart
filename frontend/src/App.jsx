@@ -4,8 +4,8 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import axios from 'axios'
 
-function App() {
-  const [intern,setintern]= useState([])
+function App()=> {
+  const [intern,setintern]= useState([]) //react hook which needs some arguments in inside
 
   useEffect(()=>{
     axios.get('/api/intern') //get request kari
@@ -23,8 +23,6 @@ function App() {
     <>
       <h1> full stack start</h1>
       <p>INTERNS: {intern.length}</p>
-
-               
       {
         intern.map((intern,index)=>(
           <div key={intern.id}>

@@ -6,7 +6,6 @@ const connectionDB=async()=>{
         console.log(`\n mongoDb connected DB HOST: ${connectioninstance.connection.host}`) //done beacuse database production nd all sab alag alag hota to idea rahe where i am
     } catch (error) {
         console.log("Mongoose connection error",error);
-        process.exit(1)
 }}
 export default connectionDB; //boiler plate
 
